@@ -1,0 +1,31 @@
+# CREATE_TABLES
+# Removes schema and tables from the database (if present) and creates empty.
+# REGISTER_CLIENT|surname|first_name|patronymic|email|phone_number
+# Adds a new client to the 'clients' table.
+# LOGIN|phone_number
+# User authorization. Without this operation it is impossible to create a delivery.
+# CREATE_DEPARTMENT|description
+# Adds a new department to the 'departments' table.
+# CREATE_DELIVERY|department_sender|department_recipient|recipient_phone|recipient_surname|recipient_first_name|recipient_patronymic
+# Creates a delivery. This command must be preceded by client authorization using the LOGIN command.
+
+CREATE_TABLES
+REGISTER_CLIENT|Гофман|Эрнст Теодор|Амадей|gofman@i.ua|997892563
+REGISTER_CLIENT|Дойл|Артур|Конан|doyl@litera.com|670482730
+REGISTER_CLIENT|Доде|Альфонс||dode@writer.bg|934820613
+REGISTER_CLIENT|Рюноскэ|Акутагава||runoske@smpl.jp|503105274
+REGISTER_CLIENT|де Сент-Экзюпери|Антуан||desentekzuperi@gmail.com|631950384
+CREATE_DEPARTMENT|Отделение №1
+CREATE_DEPARTMENT|Отделение №2
+CREATE_DEPARTMENT|Отделение №3
+CREATE_DEPARTMENT|Отделение №4
+LOGIN|997892563
+CREATE_DELIVERY|Отделение №1|Отделение №2|675249614|Голопупенко|Іван|Федорович
+CREATE_DELIVERY|Отделение №3|Отделение №1|685873922|Сало|Федір|Петрович
+LOGIN|670482730
+CREATE_DELIVERY|Отделение №4|Отделение №1|994513685|Стародуб|Зінаїда|Панасівна
+CREATE_DELIVERY|Отделение №2|Отделение №3|673416680|Верба|Степан|Якович
+LOGIN|503105274
+CREATE_DELIVERY|Отделение №1|Отделение №4|637059216|Плющ|Ярослав|В'ячеславович
+LOGIN|934820613
+CREATE_DELIVERY|Отделение №3|Отделение №4|980328796|Ляшко|Олег|Валерьевич

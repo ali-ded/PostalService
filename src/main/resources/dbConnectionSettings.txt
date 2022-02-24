@@ -1,0 +1,11 @@
+# Database Path
+//tyke.db.elephantsql.com/cffqukxq
+#//localhost/postgres
+
+# Username to connect to the database
+cffqukxq
+#postgres
+
+# Database connection password
+rbMYP06h_CVDmdh0HWOD18QRCokMMD_B
+#postgres
