@@ -52,7 +52,7 @@ public class ConnectionPool implements Constants {
             if (resultSet.next()) {
                 connectionLimit = resultSet.getInt(1);
             }
-            if (connectionLimit > CAPACITY) {
+            if (connectionLimit > CAPACITY || connectionLimit == -1) {
                 connectionLimit = CAPACITY;
             }
             resultSet.close();
